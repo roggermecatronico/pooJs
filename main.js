@@ -54,7 +54,42 @@ const Marcia = new Student(//le enviamos los argumentos al prototipo
     48, 
     ["bizcochuelos",
     "pan de yuca"]
-    );
+);
+//podemos llamar los metodos de Student para Marcia
 
 
+//prototipos con la sintaxis de Clases 
+class Student2{//nueva clase
+    	constructor({
+            name, 
+            lastName, 
+            age, 
+            cursosAprobados= []})
+            {
+            this.name = name;
+            this.lastName = lastName;
+            this.age = age;
+            this.cursosAprobados = cursosAprobados;
+            
+        }//Metodo
+        aprobarCursos(nuevocursito){
+            this.cursosAprobados.push(nuevocursito)
+        }
 
+}
+//instancia de mi clase Student2
+const miguelito = new Student2 ({//al usar objetos podemos enviar en orden diferente los parametros y definir valores por defecto
+    name: 'Miguelito',
+    age: '39', 
+    cursosAprobados:['enano', 'bodoque','orden'],
+    lastName: 'cuvano',
+})
+//llamando al metodo
+miguelito.aprobarCursos('escritura en python')
+
+const mariana = new Student2 ({//al usar objetos podemos enviar en orden diferente los parametros y definir valores por defecto
+    name: 'Mariana',
+    age: '19', 
+    
+    lastName: 'cuvano',
+})
